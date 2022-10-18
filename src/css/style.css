@@ -1,0 +1,27 @@
+.home {
+  background-color: #fff;
+}
+
+.about {
+  background-color: rgb(238, 236, 235);
+}
+
+.rooms {
+  background-color: rgb(190, 186, 186);
+}
+
+.bar {
+  background-color: rgb(238, 236, 235);
+}
+
+.restaurant {
+  background-color: #fff;
+}
+
+.amenities {
+  background-color: rgb(238, 236, 235);
+}
+
+.bookNow {
+  background-image: url(../img/samambaia.jpg);
+}
