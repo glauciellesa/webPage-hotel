@@ -32,10 +32,10 @@ ul {
 
 .header {
   background-color: var(--first-color);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(194, 194, 194, 0.3);
   width: 100%;
-  /*   position: fixed;
-  z-index: 5; */
+  position: fixed;
+  z-index: 5;
 }
 
 .nav_container {
@@ -80,32 +80,101 @@ ul {
   flex-direction: column;
   background-color: var(--first-color);
   margin: 10px, 10px;
+  padding: 40px;
   width: 100%;
   height: 100%;
 }
 
 .div_img_home {
-  width: 30%;
-  height: 100%;
-  overflow: hidden;
-  padding: 50px;
+  width: 460px;
 }
 
 .div_img_home img {
-  width: 959.7px;
+  padding-top: 80px;
+  object-fit: cover;
+  object-position: right;
+  width: 100%;
   height: 640px;
-  transform: translate(-413.548px, -5.68434e-14px) rotate(0deg);
 }
 
-/* .title_home {
+.title_home {
   position: absolute;
+  top: 150px;
   z-index: 2;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 6rem;
-  font-weight: 300;
+  font-family: "Bodoni Moda", serif;
+  font-size: 7rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 .description_home {
-  color: var(--title-color-light);
-  position: relative;
-} */
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 200;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 290px;
+  right: 670px;
+}
+
+.container_about {
+  background-color: var(--second-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+.container_text_about {
+  background-color: var(--highlight-color-dark);
+  margin: 70px 70px;
+  width: 60%;
+  color: #fff;
+  padding: 40px 30px;
+}
+
+.title_about {
+  font-family: "Bodoni Moda", serif;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  font-size: 2.5rem;
+  padding-bottom: 40px;
+}
+
+.description_about {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 200;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.02em;
+  padding-right: 30%;
+}
+
+.big_img {
+  width: 40px;
+  height: 800px;
+  display: flex;
+  justify-content: flex-end;
+  width: 650px;
+}
+
+.big_img img {
+  object-fit: cover;
+  object-position: right;
+  width: 100%;
+}
+
+.smaller_img {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: 1;
+}
+
+.smaller_img img {
+  object-fit: cover;
+  width: 100%;
+}
