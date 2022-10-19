@@ -1,32 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebPage-Hotel</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js" defer></script>
-</head>
-<body>
-    <section class="home">
-        <div>oi</div>
-    </section>
-    <section class="about">
-        <div>fala</div>
-    </section>
-    <section class="rooms">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav_container">
+        <a href="#" class="nav_logo">IKALENI</a>
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="#home" class="nav_link active-link">HOME</a>
+          </li>
+          <li class="nav_item">
+            <a href="#about" class="nav_link active-link">ABOUT</a>
+          </li>
+          <li class="nav_item">
+            <a href="#rooms" class="nav_link active-link">ROOMS</a>
+          </li>
+          <li class="nav_item">
+            <a href="#bar" class="nav_link active-link">BAR</a>
+          </li>
+          <li class="nav_item">
+            <a href="#restaurant" class="nav_link active-link">RESTAURANT</a>
+          </li>
+          <li class="nav_item">
+            <a href="#amenities" class="nav_link active-link">AMENITIES</a>
+          </li>
+          <li class="nav_item">
+            <a href="#bookNow" class="nav_link active-link">BOOK NOW</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="main">
+      <div class="container_home">
+        <div class="div_img_home">
+          <img
+            src="<%=require('./img/cama.jpg')%>"
+            alt="White Table Lamp and Vase on Side Nightstand"
+          />
+        </div>
+        <!-- <h1 class="title_home">IKALENI HOTEL</h1>
+        <p class="description_home">The ultimate minimal luxury experience</p> -->
+      </div>
+      <!-- <div class="container_about">
+        <h3 class="title_div">Welcome!</h3>
+        <p class="description_about">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          suscipit enim et sem tincidunt, at consequat sem lacinia.
+        </p>
+        <p class="description_about">
+          Curabitur in vestibulum enim. Nulla vitae lacinia ligula. Donec in
+          interdum elit. Proin viverra, magna nec laoreet auctor, risus augue
+          bibendum urna, in venenatis augue nibh vel purus.
+        </p>
+        <img
+          src="<%=require('./img/flor.jpg')%>"
+          alt="Flowers White and Brown Vases"
+        />
+        <img
+          src="<%=require('./img/espelho.jpg')%>"
+          alt="Yellow Petaled Flower Beside Mirror"
+        />
+      </div>
 
-    </section>
-    <section class="bar">
+      <div class="container_rooms">
+        <h2 class="title_Rooms">ROOMS</h2>
+        <div class="standard">
+          <h3 class="title_rooms_description">Standard Double</h3>
+          <p class="rooms_description">
+            Curabitur sed sem nec arcu ultrices dapibus et et mi. In viverra id
+            ante quis.
+          </p>
+          <img
+            src="<%=require('./img/quarto.jpg')%>"
+            alt="Beige Wooden Nightstand With White Desk Lamp; Brown Wooden Bed With Grey Comforter Set"
+          />
+        </div>
+        <div class="delux">
+          <h3 class="title_rooms_description">Delux Double</h3>
+          <p class="rooms_description">
+            Curabitur sed sem nec arcu ultrices dapibus et et mi. In viverra id
+            ante quis.
+          </p>
+          <img
+            src="<%=require('./img/delux.jpg')%>"
+            alt="Brown Wooden Nightstand"
+          />
+        </div>
+        <div class="minimal">
+          <h3 class="title_rooms_description">Minimal Suite</h3>
+          <p class="rooms_description">
+            Curabitur sed sem nec arcu ultrices dapibus et et mi. In viverra id
+            ante quis.
+          </p>
+          <img
+            src="<%=require('./img/quarto-familia.jpg')%>"
+            alt="Teddy Bears on the Bed"
+          />
+        </div>
+      </div>
 
-    </section>
-    <section class="restaurant">
+      <div class="image_bar">
+        <img src="<%=require('./img/bar.jpg')%>" alt="" />
+      </div>
+      <div class="container_bar">
+        <h2 class="title_bar">SOPHISTICATED BAR</h2>
+        <img
+          src="<%=require('./img/drink.jpg')%>"
+          alt="Alcoholic Drink on the Rocks"
+        />
+        <img
+          src="<%=require('./img/suco.jpg')%>"
+          alt="Clear Glass Footed Drinking Glass With Orange Juice"
+        />
+        <p class="descripition_bar">
+          SOPHISTICATED BAR Cras interdum lorem ac nibh consectetur, sit amet
+          ullamcorper magna posuere. Sed hendrerit dictum dolor, sit amet
+          blandit nisi pretium at. Morbi id accumsan massa. Proin faucibus nisl
+          erat, eu.
+        </p>
+      </div>
 
-    </section>
-    <section class="amenities">
+      <div class="image_bar">
+        <img
+          src="<%=require('./img/prato1.jpg')%>"
+          alt="Stainless Steel Fork and Knife on White Ceramic Plate"
+        />
+      </div>
+      <div class="container_restaurante">
+        <h2 class="title_restaurante">TOP-TIER GASTRONOMY</h2>
+        <img
+          src="<%=require('./img/prato2.jpg')%>"
+          alt="Photograpy of Dressed Food"
+        />
+        <img
+          src="<%=require('./img/prato3.jpg')%>"
+          alt="Pasta With Green Sauce on White Ceramic Plate"
+        />
+        <p class="descripition_bar">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu massa
+          eu quam dignissim egestas non scelerisque dui. Cras mollis nisi in
+          neque sodales, at hendrerit urna condimentum. Praesent urna.
+        </p>
+      </div>
 
+      <div class="container_amenities">
+        <h2 class="title_amenities">STATE OF THE ART SPA FACILITIES</h2>
+        <div class="swimmingPool">
+          <h3 class="title_amenities_description">Swimming Pool</h3>
+          <img
+            src="<%=require('./img/piscina.jpg')%>"
+            alt="Architectural Photography of Gray Granite Swimming Pool and Outdoor Lounge at Beach Side"
+          />
+          <p class="amenities_description">
+            Sed hendrerit dictum dolor, sit amet blandit nisi pretium at. Morbi
+            id accumsan massa.
+          </p>
+        </div>
+        <div class="gym">
+          <h3 class="title_amenities_description">Gym</h3>
+          <img
+            src="<%=require('./img/academia.jpg')%>"
+            alt="Man on Treadmill"
+          />
+          <p class="amenities_description">
+            Sed hendrerit dictum dolor, sit amet blandit nisi pretium at. Morbi
+            id accumsan massa.
+          </p>
+        </div>
+        <div class="spa">
+          <h3 class="title_amenities_description">Spa</h3>
+          <img
+            src="<%=require('./img/spa.jpg')%>"
+            alt="Woman Doing Facial Mask"
+          />
+          <p class="amenities_description">
+            Sed hendrerit dictum dolor, sit amet blandit nisi pretium at. Morbi
+            id accumsan massa.
+          </p>
+        </div>
+      </div>
+
+      <div class="book_Now">
+        <h1 class="title_booking">BOOK NOW</h1>
+        <div class="address">
+          <p class="address_email_phone">Address</p>
+          <p class="text_booking">123 Anywhere Street</p>
+          <p class="text_booking">Any City</p>
+          <p class="text_booking">Country</p>
+          <p class="text_booking">AN4 5TY</p>
+        </div>
+        <div class="email_address_phone">
+          <p class="address_email">Email Address</p>
+          <p class="text_booking">hello@ikaleni-hotel.com</p>
+        </div>
+        <div class="email_address_phone">
+          <p class="phone">Phone Number</p>
+          <p class="text_booking">(+12) 3456 789011</p>
+        </div>
+      </div> -->
     </section>
-    <section class="bookNow"></section>
-</body>
+  </body>
 </html>

@@ -23,8 +23,8 @@ module.exports = {
   mode: "development",
   entry: "./src/js/entrypoint.js",
   output: {
-    filename: "script.js",
     path: __dirname + "/public",
+    filename: "script.js",
   },
   devServer: {
     static: {
@@ -59,6 +59,28 @@ module.exports = {
           "css-loader", //interpreta @import, url()...
           "sass-loader",
         ],
+      },
+      {
+        test: /\.(png|jpg)$/i,
+        type: "asset/resource",
+        use: [
+          {
+            loader: "image-webpack-loader",
+            options: {
+              pngquant: {
+                quality: [0.9, 0.95],
+              },
+            },
+          },
+        ],
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10 * 1024, // Inline anything under 10kb
+          },
+        },
+        generator: {
+          filename: "images/[name]-[hash][ext]",
+        },
       },
     ],
   },
