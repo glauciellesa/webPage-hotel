@@ -40,6 +40,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "style.css",
     }),
+
     // Build a new plugin instance for each .html file found
     ...htmlFiles.map(
       (htmlFile) =>
@@ -57,11 +58,11 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader", //interpreta @import, url()...
-          "sass-loader",
+          /* "sass-loader", */
         ],
       },
       {
-        test: /\.(png|jpg)$/i,
+        test: /\.(png|jpg|svg)$/i,
         type: "asset/resource",
         use: [
           {

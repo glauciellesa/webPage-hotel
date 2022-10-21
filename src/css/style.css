@@ -40,23 +40,22 @@ ul {
 
 .nav_container {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .nav_logo {
   font-weight: 700;
-  color: var(--title-color-dark);
   font-size: 1.5rem;
-  margin-right: auto;
-  padding: 10px 10px;
+  color: var(--title-color-dark);
+  padding: 10px 16px;
   white-space: nowrap;
+  /*  margin-right: auto; */
 }
 
 .nav_list {
   display: flex;
-  align-items: center;
 }
 
 .nav_link {
@@ -64,6 +63,49 @@ ul {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--title-color-light);
   padding: 12px 16px;
+  white-space: nowrap;
+}
+
+.mobile_nav_toggle {
+  display: none;
+}
+
+.sr-only {
+  display: none;
+}
+
+@media (max-width: 35em) {
+  .nav_list {
+    position: fixed;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2rem;
+    background: hsl(20, 6%, 93%, 0.9);
+  }
+
+  .nav_item {
+    padding: 8px;
+  }
+
+  .mobile_nav_toggle {
+    display: block;
+    position: absolute;
+    background: url(../img/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    border: none;
+    z-index: 9999;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .nav_list {
+    background: hsl(20, 6%, 93%, 0.2);
+    backdrop-filter: blur(1rem);
+  }
 }
 
 .main {
