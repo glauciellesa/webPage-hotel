@@ -9,11 +9,11 @@ while (directories.length > 0) {
   const directory = directories.pop()
   const dirContents = fs
     .readdirSync(directory)
-    .map((file) => path.join(directory, file))
+    .map(file => path.join(directory, file))
 
-  htmlFiles.push(...dirContents.filter((file) => file.endsWith(".html")))
+  htmlFiles.push(...dirContents.filter(file => file.endsWith(".html")))
   directories.push(
-    ...dirContents.filter((file) => fs.statSync(file).isDirectory()),
+    ...dirContents.filter(file => fs.statSync(file).isDirectory()),
   )
 }
 
@@ -43,7 +43,7 @@ module.exports = {
 
     // Build a new plugin instance for each .html file found
     ...htmlFiles.map(
-      (htmlFile) =>
+      htmlFile =>
         new HtmlWebpackPlugin({
           template: htmlFile,
           filename: htmlFile.replace(path.normalize("src/"), ""),
