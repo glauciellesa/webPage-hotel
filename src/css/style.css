@@ -34,9 +34,7 @@ ul {
 
 body {
   width: 100vw;
-  line-height: 1.5;
-  min-height: 100vh;
-  /*overflow-x: hidden;*/
+  padding-top: 90px;
 }
 
 /* NAV MENU */
@@ -46,7 +44,6 @@ body {
   background-color: var(--first-color);
   border-bottom: 1px solid rgba(194, 194, 194, 0.3);
   width: 100%;
-  height: 50px;
   top: 0;
   position: fixed;
   z-index: 5;
@@ -55,6 +52,7 @@ body {
 .nav_container {
   justify-content: space-between;
   font-family: var(--font-text);
+  width: 100%;
   display: flex;
   align-items: center;
 }
@@ -88,146 +86,72 @@ body {
   display: none;
 }
 
-/* Main Section*/
-.main {
-  margin-top: 50px;
-  width: 100vw;
-  height: 100vh;
-}
-
 /* HOME */
-img {
-  width: 100%;
-  height: 100%; /* width and height:  it takes up the available space we have */
-  object-fit: cover;
-  position: absolute; /* it makes the image be positioned in the first available pixel to the top left-hand side */
-  top: 0; /* Move the img up on tio of the padding seted in div (radio_box)*/
-  object-position: right; /*  Object position allows us to align an element inside its container using two values,
-   that would be the horizontal axis, and the vertical axis or simple keywords like left, top, bottom, right, center 
-   and so on. */
-}
 
 .container_home {
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
-  height: 100vh;
-  margin: 8% 0;
 }
 
-.div_img_home {
-  /*  margin-top: 100px; */
+.card_img_home {
   width: 40vw;
-  height: auto;
   overflow: hidden;
+  position: relative;
 }
 
-.ratio_box {
+.the_img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+  position: absolute;
+  top: 0;
+}
+
+.ratio_box_home {
   width: 100%;
   height: 0;
-  padding-top: calc(100% * (5 / 4));
-  /* padding-top: 100%; */
-  position: relative; /* It allows to position any other element inside that box wherever we want to. */
+  padding-top: calc(100% * (4 / 3.5));
+  position: relative;
+}
+
+.card_text {
+  position: absolute;
+  margin: 5% auto;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .title_home {
-  position: absolute;
-  top: 30%;
   font-family: var(--font-title);
-  font-weight: 500;
-  font-size: 8rem;
+  font-weight: 400;
+  font-size: 10vw;
 }
 
 .description_home {
-  position: absolute;
-  bottom: 25%;
-  left: 3%;
-  font-size: 1.5rem;
+  font-family: var(--font-text);
   font-weight: 200;
-  /* color: #333; */
-  font-family: var(--font-text);
+  font-size: 2vw;
+  display: inline-flex;
+  position: relative;
+  top: 4px;
 }
 
-/* ABOUT */
-
-.container_about {
-  height: auto;
-  width: 100vw;
-  background-color: var(--second-color);
-  border: 4px solid brown;
-  display: flex;
-  flex-direction: row;
+.card_line {
+  display: inline-flex;
   align-items: center;
-  position: relative;
+  justify-content: flex-end;
+  width: 60%;
+  border-top: 2px solid;
 }
 
-.container_text_about {
-  background-color: rgb(112, 98, 92);
-  color: var(--text-color-light);
-  width: 40vw;
-  margin: 40px;
-  padding: 30px;
-  position: relative;
-  aspect-ratio: 4 /4;
-}
-
-.title_about {
-  padding-left: 20px;
-  font-size: 2rem;
-  font-family: var(--font-title);
-  font-weight: 300;
-}
-
-.description_about {
-  font-family: var(--font-text);
-  font-weight: 100;
-  font-size: 0.8rem;
-  padding: 15px;
-  margin-right: 50px;
-}
-
-.radio_about img {
-  width: 100%;
-  height: 100%;
-  top: 0;
+.card_line img {
   position: absolute;
-  object-fit: cover;
-  object-position: left;
-}
-
-.radio_about {
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding-top: calc(100% * (5 / 4));
-}
-
-.smaller_img {
-  width: 20vw;
-  overflow: hidden;
-  right: 10%;
-  position: relative;
-}
-
-.big_img {
-  position: relative;
-  overflow: hidden;
-  border: 3px solid red;
-  height: 100%;
-  right: 0;
-}
-
-.radio_about_seconImg {
-  width: 10vw;
-  right: 0;
-}
-
-.radio_about_seconImg img {
-  display: block;
-  position: relative;
-  width: 100px;
-  object-fit: cover;
+  margin-right: -25px;
+  height: 50px;
 }
 
 @media (max-width: 35em) {
@@ -268,10 +192,20 @@ img {
     width: 2rem;
     aspect-ratio: 1;
     top: 1rem;
-    right: 3rem;
+    right: 1rem;
+  }
+
+  .mobile_nav_toggle[aria-expanded="true"] {
+    background-image: url("../img/icon-close.svg");
+  }
+
+  .card_line {
+    display: none;
   }
 
   .container_text_about {
+    display: flex;
+    justify-content: center;
     width: 100%;
   }
 
